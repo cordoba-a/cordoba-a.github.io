@@ -7,93 +7,81 @@
   <title>José Eduardo Cordoba Arango</title>
   <link rel="stylesheet" href="styles/styles.css">
 
-  <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
-    // be compatible with the behavior of Pandoc < 2.8).
-    document.addEventListener('DOMContentLoaded', function(e) {
-      var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
-      var i, h, a;
-      for (i = 0; i < hs.length; i++) {
-        h = hs[i];
-        if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
-        a = h.attributes;
-        while (a.length > 0) h.removeAttribute(a[0].name);
-      }
-    });
-  </script>
+
 </head>
 
 <body>
   <div class="container">
-    <div class="left d-flex row flex-row container-fluid">
+    <div class="left">
       <!-Mitad Izquierda-->
-      <div class="d-flex flex-column col-5 align-items-center text-center align-self-center">
-        <div class="mx-auto text-center">
-          <div class="p-3">
+      <div class="flex-column centered">
+        <div class="centered-auto-text">
+          <div class="padding-large">
             <img src="assets/images/circular.png" alt="Foto Perfil" style="height:15rem">
           </div>
 
-          <div class="p-2">
-            <h1>José Eduardo Cordoba Arango</h1>
+          <div class="padding-medium">
+            <h2>José Eduardo Cordoba Arango</h2>
           </div>
 
           <div>
-            <ul class="list-inline">
+              <ul class="list-inline">
 
-              <li class="list-inline-item">
-                <a href="https://docs.google.com/document/d/15aaJgAFGz4InIuc17EtHzAykSCtY5heE/edit?usp=sharing&ouid=103392101681013285700&rtpof=true&sd=true">
-                  <button type="button" class="btn btn-outline-dark mb-2" style="border: none";>
-                    📑 CV
-                  </button>
-                </a>
-              </li>
+                <li class="inline-list-item">
+                  <a href="https://docs.google.com/document/d/15aaJgAFGz4InIuc17EtHzAykSCtY5heE/edit?usp=sharing&ouid=103392101681013285700&rtpof=true&sd=true">
+                    <button type="button" class="button" style="border: none";>
+                      📑 CV
+                    </button>
+                  </a>
+                </li>
 
-              <li class="list-inline-item">
-                <a href="https://github.com/cordoba-a">
-                  <button type="button" class="btn btn-outline-dark mb-2" style="display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" width="18" style="margin-right: 5px;">
-                    GitHub
-                  </button>
-                </a>
-              </li>
+                <li class="inline-list-item">
+                  <a href="https://github.com/cordoba-a">
+                    <button type="button" class="button" style="display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" width="18" style="margin-right: 5px;">
+                      GitHub
+                    </button>
+                  </a>
+                </li>
 
-              <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/eduardocordobaa/">
-                  <button type="button" class="btn btn-outline-dark mb-2" style="display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Logo" width="18" style="margin-right: 5px;">
-                    LinkedIn
-                  </button>
-                </a>
-              </li>
+                <li class="inline-list-item">
+                  <a href="https://www.linkedin.com/in/eduardocordobaa/">
+                    <button type="button" class="button" style="display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Logo" width="18" style="margin-right: 5px;">
+                      LinkedIn
+                    </button>
+                  </a>
+                </li>
 
-            </ul>
-          </div>
+              </ul>
+        </div>
 
           <hr style="width:60%;" />
-          <div class="p-2">
+          <div class="adding-medium">
             <div id="icon-list">
               <ul class="list-inline">
 
-                <li class="list-inline-item">
+                <li class="inline-list-item">
                   <a>
-                    <button type="button" class="btn btn-outline-dark mb-2" style="background-color: #f3f3ec; display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
+                    <button type="button" class="button" style="background-color: #f3f3ec; display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" width="20" width="18" style="margin-right: 5px;">
                       Python
                     </button>
                   </a>
                 </li>
 
-                <li class="list-inline-item">
+                <li class="inline-list-item">
                   <a>
-                    <button type="button" class="btn btn-outline-dark mb-2" style="background-color: #f3f3ec; display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
+                    <button type="button" class="button" style="background-color: #f3f3ec; display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter Logo" width="20" width="18" style="margin-right: 5px;">
                       Jupyter Notebook
                     </button>
                   </a>
                 </li>
 
-                <li class="list-inline-item">
+                <li class="inline-list-item">
                   <a>
-                    <button type="button" class="btn btn-outline-dark mb-2" style="background-color: #f3f3ec; display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
+                    <button type="button" class="button" style="background-color: #f3f3ec; display: flex; border: none; align-items: center; justify-content: center; padding: 5px 10px;">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code Logo" width="20" width="18" style="margin-right: 5px;">
                       VSCode
                     </button>
@@ -106,9 +94,9 @@
       </div>
     </div>
 
-    <div class="right d-flex row flex-row container-fluid">
+    <div class="right">
       <!-Mitad Derecha-->
-      <div class="d-flex flex-column col px-5 align-items-center align-self-center" style="overflow-y: scroll;">
+      <div class="flex-column" style="overflow-y: scroll;">
 
         <div>
           <h2>
@@ -126,7 +114,7 @@
                   La pagina web se diseño pensando en una empresa de venta de lentes por internet.
                 </td>
               </tr>
-              <li class="button-item">
+              <li class="boton">
                 <a href="landing_page_sales/index_landing.html">
                   <button type="button" class="btn btn-outline-dark mb-2">
                     landing_page_sales
@@ -152,7 +140,7 @@
             </span></td>
             <tbody>
 
-            <li class="button-item">
+            <li class="boton">
               <a href="fake_spotify/fake_spotify.html">
                 <button type="button" class="btn btn-outline-dark mb-2">
                   fake_spotify
