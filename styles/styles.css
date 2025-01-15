@@ -14,7 +14,7 @@ body, html {
   flex: 1; /* Cada sección ocupa el 50% del contenedor */
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: white;
   width: 100%;
   padding-right: 15px;
@@ -33,7 +33,7 @@ body, html {
 .right {
   background-color: #28a745; /* Verde */
   align-items: left;
-  }
+}
 
 /*contenedor 3*/
 .flex-column {
@@ -96,21 +96,34 @@ body, html {
                 border-color 0.15s ease-in-out,
                 box-shadow 0.15s ease-in-out;
   margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+.button:hover {
+  color: #fff; /* Cambia el texto a blanco al pasar el mouse */
+  background-color: #1ed760; /* Cambia el fondo al color oscuro */
+  border-color: #343a40; /* Borde oscuro */
+}
+
+.button:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); /* Sombra de enfoque */
+}
+
+.button.disabled,
+.button:disabled {
+  opacity: 0.65; /* Transparencia para deshabilitado */
+  cursor: not-allowed;
+}
+
+/* Media Queries para dispositivos móviles y tabletas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Disposición vertical en dispositivos pequeños */
   }
 
-  .button:hover {
-    color: #fff; /* Cambia el texto a blanco al pasar el mouse */
-    background-color: #1ed760; /* Cambia el fondo al color oscuro */
-    border-color: #343a40; /* Borde oscuro */
+  .left, .right {
+    flex: none; /* No se aplica el 50% del contenedor, se ajusta al contenido */
+    width: 100%; 
+    flex-direction: column/* Ocupa todo el ancho del contenedor */
   }
-
-  .button:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); /* Sombra de enfoque */
-  }
-
-  .button.disabled,
-  .button:disabled {
-    opacity: 0.65; /* Transparencia para deshabilitado */
-    cursor: not-allowed;
-  }
+}
