@@ -115,6 +115,59 @@ body, html {
   cursor: not-allowed;
 }
 
+
+
+/* Media Query para pantallas de iPhone (375px de ancho o menos) */
+@media (max-width: 375px) {
+  .container {
+    flex-direction: column; /* Cambia a disposición vertical */
+    height: auto; /* El contenedor no necesita ocupar toda la altura de la pantalla */
+  }
+
+  .left, .right {
+    flex: none; /* No ocupan el 50%, se ajustan al tamaño del contenido */
+    width: 100%; /* Ambos ocupan todo el ancho del contenedor */
+    padding-right: 0; /* Elimina el padding derecho */
+    padding-left: 0; /* Elimina el padding izquierdo */
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-left: 0; /* Elimina el margen izquierdo */
+    font-size: 1rem; /* Reduce el tamaño de la fuente para pantallas más pequeñas */
+  }
+
+  .left {
+    background-color: #007bff; /* Azul */
+    justify-content: center; /* Centra el contenido */
+  }
+
+  .right {
+    background-color: #28a745; /* Verde */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+  }
+
+  /* Ajusta el tamaño de los elementos de la clase .flex-column */
+  .flex-column {
+    max-width: 100%; /* Asegura que los elementos ocupen todo el ancho disponible */
+    flex: 1 0 100%; /* Los elementos se ajustan al 100% del ancho */
+  }
+
+  /* Ajustes de padding */
+  .padding-large {
+    padding: 0.5rem !important; /* Reduce el padding en pantallas más pequeñas */
+  }
+
+  .padding-medium {
+    padding: 0.2rem !important; /* Reduce el padding en pantallas más pequeñas */
+  }
+
+  /* Ajustes adicionales para los botones */
+  .button {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente del botón */
+    padding: 0.4rem 0.8rem; /* Ajusta el tamaño del padding en botones */
+  }
+}
+
+
+
 /* Media Query para pantallas de 768px o menos (móviles y tabletas pequeñas) */
 @media (max-width: 768px) {
   .container {
