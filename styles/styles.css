@@ -1,8 +1,12 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado */
+}
 
 .container {
   display: flex;
@@ -96,33 +100,37 @@ body, html {
   margin-right: 0.5rem; /* Agrega espacio a la derecha de cada elemento excepto el último */
 }
 
-.scrollable-container {
-  width: 100%; /* Ancho máximo del contenedor */
-  height: 100vh; /* Altura igual al viewport */
-  border: 1px solid #ccc; /* Borde para distinguir el div */
-  overflow-y: auto; /* Habilita el scroll vertical */
-  overflow-x: hidden; /* Deshabilita el scroll horizontal */
-  padding: 10px; /* Espaciado interno */
-  margin: 20px auto; /* Margen superior e inferior de 20px, centrado horizontalmente */
-  box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-}
-
-.scrollable-container p {
-  margin: 0;
-  line-height: 1.5;
-}
-
 /*boton*/
+.button-skills {
+  display: flex;
+  font-weight: 400;
+  color: #343a40; /* Color oscuro del texto */
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #f3f3ec;
+  font-size: 0.9rem; /* Tamaño del texto */
+  line-height: 1.5;
+  border-radius: 10px; /* Bordes completamente redondeados */
+  margin-bottom: 0.5rem; /* Margen inferior */
+  border: none;
+  align-items: center;
+  justify-content:center;
+  padding: 5px 10px;
+}
+
 .button {
-  display: inline-block;
+  display: flex;
   font-weight: 400;
   color: #343a40; /* Color oscuro del texto */
   text-align: center;
   vertical-align: middle;
   user-select: none;
   background-color: transparent;
-  border: 1px solid #343a40; /* Borde oscuro */
-  padding: 0.375rem 0.75rem; /* Espaciado interno */
+  border: none; /* Borde oscuro */
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px; /* Espaciado interno */
   font-size: 1rem; /* Tamaño del texto */
   line-height: 1.5;
   border-radius: 0.25rem; /* Bordes redondeados */
@@ -131,15 +139,6 @@ body, html {
                 border-color 0.15s ease-in-out,
                 box-shadow 0.15s ease-in-out;
   margin-bottom: 0.5rem; /* Margen inferior */
-}
-
-.button-skills {
-  background-color: #f3f3ec;
-  display: flex;
-  border: none;
-  align-items: center;
-  justify-content:center;
-  padding: 5px 10px;
 }
 
 .button:hover {
@@ -159,6 +158,26 @@ body, html {
   cursor: not-allowed;
 }
 
+
+
+/* Estilos generales para pantallas grandes (computadoras) */
+@media (min-width: 769px) {
+  .scrollable-container {
+    width: 100%; /* Ancho máximo del contenedor */
+    height: 100vh; /* Altura igual al viewport */
+    border: 1px solid #ccc; /* Borde para distinguir el div */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    overflow-x: hidden; /* Deshabilita el scroll horizontal */
+    padding: 10px; /* Espaciado interno */
+    margin: 20px auto; /* Margen superior e inferior de 20px, centrado horizontalmente */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+  }
+
+  .scrollable-container p {
+    margin: 0;
+    line-height: 1.5;
+  }
+}
 
 
 /* Media Query para pantallas de iPhone (375px de ancho o menos) */
@@ -255,6 +274,16 @@ body, html {
   .button {
     font-size: 0.9rem; /* Reduce el tamaño de la fuente */
     padding: 0.4rem 0.8rem; /* Ajusta el tamaño del padding */
+  }
+
+  .scrollable-container {
+    width: 100%;
+    height: auto; /* Permite que el contenedor se adapte al contenido */
+    border: none; /* Elimina el borde */
+    overflow: visible; /* Deshabilita el scroll */
+    padding: 5px; /* Reducir el padding para pantallas pequeñas */
+    margin: 0 auto; /* Quita márgenes adicionales */
+    box-sizing: border-box;
   }
 }
 
