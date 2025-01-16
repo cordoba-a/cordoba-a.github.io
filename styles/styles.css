@@ -15,7 +15,7 @@ body, html {
   display: flex;
   align-items: center;
   font-size: 1.4rem;
-  color: white;
+  color: black;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -26,13 +26,32 @@ body, html {
 }
 
 .left {
-  background-color: #007bff; /* Azul */
+  /*background-color: #007bff; /* Azul */
   justify-content: center;
 }
 
 .right {
-  background-color: #28a745; /* Verde */
+  /*background-color: #28a745; /* Verde */
   align-items: left;
+}
+
+.right-flex-column  {
+  display: flex !important;
+  flex-direction: column !important;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 100%;
+  padding-right: 3rem !important;
+  align-items: center !important;
+  align-self: center !important;
+}
+
+.my-5 {
+  margin-bottom: 3rem !important;
+  margin-left: 20px; /* Margen derecho de 20px */
 }
 
 /*contenedor 3*/
@@ -77,6 +96,22 @@ body, html {
   margin-right: 0.5rem; /* Agrega espacio a la derecha de cada elemento excepto el último */
 }
 
+.scrollable-container {
+  width: 100%; /* Ancho máximo del contenedor */
+  height: 100vh; /* Altura igual al viewport */
+  border: 1px solid #ccc; /* Borde para distinguir el div */
+  overflow-y: auto; /* Habilita el scroll vertical */
+  overflow-x: hidden; /* Deshabilita el scroll horizontal */
+  padding: 10px; /* Espaciado interno */
+  margin: 20px auto; /* Margen superior e inferior de 20px, centrado horizontalmente */
+  box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+.scrollable-container p {
+  margin: 0;
+  line-height: 1.5;
+}
+
 /*boton*/
 .button {
   display: inline-block;
@@ -96,6 +131,15 @@ body, html {
                 border-color 0.15s ease-in-out,
                 box-shadow 0.15s ease-in-out;
   margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+.button-skills {
+  background-color: #f3f3ec;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content:center;
+  padding: 5px 10px;
 }
 
 .button:hover {
@@ -135,12 +179,10 @@ body, html {
   }
 
   .left {
-    background-color: #007bff; /* Azul */
     justify-content: center; /* Centra el contenido */
   }
 
   .right {
-    background-color: #28a745; /* Verde */
     align-items: flex-start; /* Alinea el contenido a la izquierda */
   }
 
@@ -168,7 +210,8 @@ body, html {
 
 
 
-/* Media Query para pantallas de 768px o menos (móviles y tabletas pequeñas) */
+
+/* Media Query para dispositivos móviles (pantallas de 768px o menos) */
 @media (max-width: 768px) {
   .container {
     flex-direction: column; /* Cambia a disposición vertical */
@@ -186,33 +229,66 @@ body, html {
   }
 
   .left {
-    background-color: #007bff; /* Azul */
     justify-content: center; /* Centra el contenido */
   }
 
   .right {
-    background-color: #28a745; /* Verde */
     align-items: flex-start; /* Alinea el contenido a la izquierda */
   }
 
-  /* Ajusta el tamaño de los elementos de la clase .flex-column */
+  /* Ajustes para la clase .flex-column */
   .flex-column {
     max-width: 100%; /* Asegura que los elementos ocupen todo el ancho disponible */
     flex: 1 0 100%; /* Los elementos se ajustan al 100% del ancho */
   }
 
-  /* Ajustes adicionales de padding */
+  /* Ajustes de padding */
   .padding-large {
-    padding: 0.5rem !important; /* Reduce el padding en pantallas pequeñas */
+    padding: 0.5rem !important; /* Reduce el padding en pantallas más pequeñas */
   }
 
   .padding-medium {
-    padding: 0.2rem !important; /* Reduce el padding en pantallas pequeñas */
+    padding: 0.2rem !important; /* Reduce el padding en pantallas más pequeñas */
   }
 
-  /* Ajustes para los botones, si existen */
+  /* Ajustes adicionales para los botones */
   .button {
-    font-size: 1rem; /* Reduce el tamaño de la fuente */
-    padding: 0.5rem 1rem; /* Ajusta el tamaño del padding */
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+    padding: 0.4rem 0.8rem; /* Ajusta el tamaño del padding */
+  }
+}
+
+/* Media Query para dispositivos pequeños (pantallas de 375px o menos, como el iPhone) */
+@media (max-width: 375px) {
+  .container {
+    flex-direction: column; /* Cambia a disposición vertical */
+    height: auto;
+  }
+
+  .left, .right {
+    font-size: 1rem; /* Reducción aún mayor del tamaño de la fuente */
+    padding: 0.5rem; /* Aumenta el padding */
+  }
+
+  .left {
+    justify-content: center;
+  }
+
+  .right {
+    align-items: flex-start;
+  }
+
+  .flex-column {
+    max-width: 100%;
+    flex: 1 0 100%;
+  }
+
+  .padding-large {
+    padding: 0.3rem !important; /* Ajuste de padding aún más pequeño */
+  }
+
+  .button {
+    font-size: 0.8rem; /* Ajuste del tamaño de los botones */
+    padding: 0.3rem 0.6rem; /* Ajuste del tamaño del padding */
   }
 }
